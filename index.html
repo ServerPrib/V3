@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasyaa Official - Panel Hosting</title>
+    <link rel="icon" type="image/png" href="https://files.catbox.moe/zvzz3c.jpg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="page" id="about">
+        <h1>Rasyaa Official</h1>
+        <div class="typing-animation">Panel Hosting Berkualitas Tinggi</div>
+        <p class="subtitle">Solusi hosting terbaik untuk kebutuhan server Anda dengan garansi 100%</p>
+        <div class="social">
+            <a href="#" class="btn" onclick="showPanelForm()">Beli Panel</a>
+            <a href="#" class="btn btn-secondary" onclick="showPaymentMethods()">Metode Pembayaran</a>
+        </div>
+    </div>
+
+    <div class="page hidden" id="payment">
+        <h1>Payment Methods</h1>
+        <p class="subtitle">Silahkan pilih salah satu metode pembayaran di bawah ini</p>
+
+        <div class="qr-frame" onclick="zoomQR()">
+            <img id="qrisImage" src="" alt="QR Code for Payment">
+        </div>
+
+        <p class="subtitle">Scan kode QR di atas dengan aplikasi pembayaran Anda</p>
+
+        <div class="payment-info">
+            <details>
+                <summary>E-WALLET</summary> 
+                <p><strong>DANA</strong>: 087821239407</p>
+                <p><strong>GOPAY</strong>: 087821239407</p>
+                <p><strong>OVO</strong>: 087821239407</p>
+            </details>
+
+            <details>
+                <summary>TRANSFER BANK</summary>
+                <p><strong>BNI</strong>: 2110196345</p>
+            </details>
+        </div>
+
+        <div class="social">
+            <a href="https://wa.me/6287821239407" target="_blank" class="btn">WhatsApp</a>
+            <a href="https://t.me/verlangid11" target="_blank" class="btn">Telegram</a>
+        </div>
+
+        <a href="#" class="btn back-btn" onclick="showAbout()">Back</a>
+    </div>
+
+    <div class="page hidden" id="panel-form">
+        <h1>Beli Panel</h1>
+        <p class="subtitle">Isi formulir berikut untuk memesan panel hosting</p>
+
+        <div class="panel-info">
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="username">Username Panel</label>
+                    <input type="text" id="username" class="form-control" placeholder="Masukkan username untuk panel" required>
+                    <span class="form-text">Hanya boleh mengandung huruf kecil, angka, dan underscore (_) (3-16 karakter)</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Nomor WhatsApp</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Contoh: 6287821239407" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tipe Panel</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="panelType" value="private" checked>
+                            <span class="radio-label">Panel Private</span>
+                            <span class="radio-price">Rp15.000</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="panelType" value="public">
+                            <span class="radio-label">Panel Public</span>
+                            <span class="radio-price">Rp10.000</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Spesifikasi RAM</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="ram" value="1gb" checked>
+                            <span class="radio-label">1GB RAM</span>
+                            <span class="radio-price">+Rp1.000</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="ram" value="2gb">
+                            <span class="radio-label">2GB RAM</span>
+                            <span class="radio-price">+Rp2.000</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="ram" value="4gb">
+                            <span class="radio-label">4GB RAM</span>
+                            <span class="radio-price">+Rp4.000</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="ram" value="8gb">
+                            <span class="radio-label">8GB RAM</span>
+                            <span class="radio-price">+Rp8.000</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="ram" value="10gb">
+                            <span class="radio-label">10GB RAM</span>
+                            <span class="radio-price">+Rp10.000</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="ram" value="unli">
+                            <span class="radio-label">Unlimited RAM</span>
+                            <span class="radio-price">+Rp15.000</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="social">
+                    <button type="button" class="btn btn-secondary" onclick="showAbout()">Kembali</button>
+                    <button type="submit" class="btn">Lanjut Pembayaran</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="page hidden" id="payment-confirm">
+        <h1>Konfirmasi Pembayaran</h1>
+        <p class="subtitle">Silahkan selesaikan pembayaran untuk pesanan Anda</p>
+
+        <div class="qr-frame" onclick="zoomQR()">
+            <img id="paymentQrisImage" src="" alt="QR Code for Payment">
+        </div>
+
+        <div class="payment-details">
+            <div class="detail-row">
+                <span class="detail-label">ID Transaksi:</span>
+                <span class="detail-value" id="transactionId">TRX-123456789</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Tipe Panel:</span>
+                <span class="detail-value" id="panelTypeDisplay">Private</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Spesifikasi RAM:</span>
+                <span class="detail-value" id="ramDisplay">1GB</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Username:</span>
+                <span class="detail-value" id="usernameDisplay">user123</span>
+            </div>
+            <div class="detail-row total-row">
+                <span class="detail-label">Total Pembayaran:</span>
+                <span class="detail-value" id="totalAmount">Rp16.000</span>
+            </div>
+        </div>
+
+        <p class="expiry-notice">QRIS pembayaran hanya berlaku dalam 5 menit</p>
+
+        <div class="social">
+            <button type="button" class="btn btn-danger" onclick="cancelPayment()">Batalkan</button>
+            <button type="button" class="btn" onclick="checkPayment()">Cek Status</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="qrOverlay" onclick="closeZoom()">
+        <img id="zoomedQR" src="" alt="QR Code for Payment">
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
