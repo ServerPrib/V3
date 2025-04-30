@@ -1,0 +1,223 @@
+
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header {
+  background-color: #222;
+  padding: 1rem;
+}
+
+header .logo {
+  font-size: 2rem;
+  color: #0ff;
+  text-transform: uppercase;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f0f;
+}
+
+/* Hero section */
+.hero {
+  background: url('https://files.catbox.moe/hgo1zi.jpg') no-repeat center center/cover;
+  padding: 5rem 0;
+  color: #0ff;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #0ff;
+  box-shadow: 0 0 15px #f0f;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero .btn-cta {
+  background-color: #f0f;
+  padding: 0.8rem 2rem;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  box-shadow: 0 0 15px #0ff;
+  transition: 0.3s;
+}
+
+.hero .btn-cta:hover {
+  background-color: #0ff;
+  color: #fff;
+  box-shadow: 0 0 20px #f0f;
+}
+
+/* Payment section */
+.payment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.payment-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.payment-button {
+  background-color: #f0f;
+  padding: 1rem 2rem;
+  color: #000;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #0ff;
+  transition: 0.3s;
+}
+
+.payment-button:hover {
+  background-color: #0ff;
+  color: #fff;
+  box-shadow: 0 0 20px #f0f;
+}
+
+.copy-btn {
+  background-color: #0ff;
+  padding: 0.8rem 1.5rem;
+  color: #000;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #f0f;
+  transition: 0.3s;
+}
+
+.copy-btn:hover {
+  background-color: #f0f;
+  color: #fff;
+  box-shadow: 0 0 15px #0ff;
+}
+
+/* Harga Paket section */
+.section {
+  padding: 3rem 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 15px #0ff;
+  transition: 0.3s;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  color: #f0f;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #bbb;
+  font-size: 1.2rem;
+}
+
+.card:hover {
+  background-color: #444;
+  box-shadow: 0 0 20px #0ff;
+}
+
+.card .btn-cta {
+  background-color: #f0f;
+  padding: 0.8rem 2rem;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 15px #0ff;
+  transition: 0.3s;
+}
+
+.card .btn-cta:hover {
+  background-color: #0ff;
+  color: #fff;
+  box-shadow: 0 0 20px #f0f;
+}
+
+/* Floating WhatsApp button */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0ff;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #0ff;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.wa-float:hover {
+  background-color: #f0f;
+  box-shadow: 0 0 25px #0ff;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  padding: 1rem;
+  color: #bbb;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
